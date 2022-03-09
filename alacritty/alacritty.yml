@@ -134,7 +134,7 @@ font:
     style: Italic
 
   # Point size
-  size: 14
+  size: 16
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -170,34 +170,34 @@ draw_bold_text_with_bright_colors: true
 
 # ...
 
-# Colors (Wombat)
 colors:
   # Default colors
   primary:
-    background: '#2E3440'
-    foreground: '#D8DEE9'
+    background: '0x2b303b'
+    foreground: '0xe9b1cd'
 
   # Normal colors
   normal:
-    black:   '#3B4252'
-    red:     '#BF616A'
-    green:   '#A3BE8C'
-    yellow:  '#EBCB8B'
-    blue:    '#81A1C1'
-    magenta: '#B48EAD'
-    cyan:    '#88C0D0'
-    white:   '#E5E9F0'
+    black:   '0x2b303b'
+    red:     '0xc44b7f'
+    green:   '0xa8145e'
+    yellow:  '0xfd2f9b'
+    blue:    '0xfcd1d7'
+    magenta: '0xb48ead'
+    cyan:    '0x6c64a4'
+    white:   '0xc0c5ce'
 
   # Bright colors
   bright:
-    black:   '#4C566A'
-    red:     '#BF616A'
-    green:   '#A3BE8C'
-    yellow:  '#EBCB8B'
-    blue:    '#81A1C1'
-    magenta: '#B48EAD'
-    cyan:    '#8FBCBB'
-    white:   '#ECEFF4'
+    black:   '0xc567a8'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0x7909cc'
+    blue:    '0x6c64a4'
+    magenta: '0xbf82b4'
+    cyan:    '0x6c64a4'
+    white:   '0xe9b1cd'
+
 
   # Indexed Colors
   #

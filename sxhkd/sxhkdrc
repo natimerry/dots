@@ -19,6 +19,8 @@ super + Escape
 super F1
 	urxvt -e vim /home/troll/.config/sxhkd/sxhkdrc
 
+super + Print
+    flameshot gui
 #
 # bspwm hotkeys
 #

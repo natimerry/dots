@@ -4,11 +4,11 @@ sxhkd &
 autorandr --change primary
 lxpolkit &
 # If HDMI-1 connected, split workspaces to both monitors
-if [ "$(xrandr | grep "HDMI-0 connected")" ]
+if [ "$(xrandr | grep "DP-0 connected")" ]
 then
-    bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9 10
 else
-    bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor eDP-1-1 -d 1 2 3 4 5 6 7 8 9 10
 fi
 
 # Used to make polybar maintain proper workspaces per monitor when going from 2
@@ -28,7 +28,7 @@ bspc config left_padding 0
 
 bspc rule -a URxvt:scratchy sticky=on state=floating rectangle=widthxheight+Xoffset+Yoffset
 
-bspc config border_width       2
+bspc config border_width       6
 bspc config border_radius      6
 bspc config window_gap          10
 
@@ -40,11 +40,11 @@ bspc config gapless_monocle      true
 # ------- Non-BSPWM related ------
 # --------------------------------
 # Set wallpaper
-feh --bg-fill ~/Documents/Wallpapers/arch_dracula.png
+feh --bg-fill ~/Documents/Wallpapers/waifu.jpg
 # Reload .Xresources
 bspc config border_radius 12
 # Launch polybar
-~/.config/polybar/launch.sh dark
+sh ~/.config/polybar/launch.sh --docky
 # Change from ugly 'X' cursor when hovering over background
 xsetroot -cursor_name left_ptr
 # Make betterlockscreen generate and cache a background image for locking
@@ -63,11 +63,11 @@ nm-applet &
 
 # ------- Mouse/Touchpad fixes ------
 # Start libinput gestures
-libinput-gestures-setup start
+ibinput-gestures-setup start
 # Xinput configs (touchpad)
 xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
 xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Disable While Typing Enabled" 0
 setxkbmap -option
 setxbmap -layout "us"
-pamixer --sink alsa_output.usb-Logitech_G431_Gaming_Headset_000000000000-00.analog-stereo
+pipewire &

@@ -1,15 +1,18 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
+./fm6000 -say "Keep it simple stupid." -c white
 alias yeet="paru -Rscn"
 alias yay="paru"
 alias samba="pcmanfm smb://192.168.29.46:1445/LANdrive/"
 alias MurderChildren= "paru -Rscn $(pacman -Qtdq) $(paru -Qtdq)"
+alias clear="clear && neofetch |lolcat"
+alias cl="clear"
 # confirmations, etc.) must go above this block; everything else may go below.
 # the detailed meaning of the below three variable can be found in `man zshparam`.
 export HISTFILE=~/.histfile
 export HISTSIZE=1000000   # the number of items for the internal history list
 export SAVEHIST=1000000   # maximum number of items for the history file
-colorscript random
+
 # The meaning of these options can be found in man page of `zshoptions`.
 setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
 setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
