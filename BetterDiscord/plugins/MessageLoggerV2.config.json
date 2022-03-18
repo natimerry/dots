@@ -18,7 +18,10 @@
         "savedMessagesCap": 1000,
         "reverseOrder": true,
         "onlyLogWhitelist": true,
-        "whitelist": [],
+        "whitelist": [
+            "846080155268677685",
+            "940135856767914074"
+        ],
         "blacklist": [],
         "notificationBlacklist": [],
         "toastToggles": {

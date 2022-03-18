@@ -1,4 +1,1 @@
-//@theme "/usr/share/rofi/themes/nord.rasi"
-//@theme "/home/nolife/.local/share/rofi/themes/Mint-Y-Dark-Pink.rasi"
-//@theme "/usr/share/rofi/themes/minimal.rasi"
 @theme "/usr/share/rofi/themes/minimal.rasi"

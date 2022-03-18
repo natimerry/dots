@@ -17,8 +17,8 @@
 :root {
 
 	/* ACCENT COLORS */
-	--main-color: #e9b1cd; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
-	--hover-color: #81a1c1; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+	--main-color: #cf8ef4; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+	--hover-color: #63c5ea; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
 	--success-color: #a3be8c; /* success accent color (hex, rgb or hsl) [default: #43b581] */
 	--danger-color: #bf616a; /* danger accent color (hex, rgb or hsl) [default: #982929] */	
 	--url-color: var(--main-color); /*The color of url links [default: var(--main-color)]*/
@@ -27,7 +27,7 @@
 	--online-color: #a3be8c; /* online status color (hex, rgb or hsl) [default: #43b581] */
 	--idle-color: #ebcb8b; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
 	--dnd-color: #bf616a; /* dnd status color (hex, rgb or hsl) [default: #982929] */
-	--streaming-color: #b48ead; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+	--streaming-color: #cf8ef4; /* streaming status color (hex, rgb or hsl) [default: #593695] */
 	--offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
 
 	/* GENERAL */
@@ -41,7 +41,7 @@
 	/* APP BACKGROUND */
 	--background-shading: 0%; /* app background shading (0 for complete smoothness) [default: 100%] */
 	--background-overlay: rgba(0, 0, 0, 0.6); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
-	--background-image: url(https://images4.alphacoders.com/910/thumb-1920-910131.jpg); /* app background image (link must be HTTPS) [default: url(https://clearvision.gitlab.io/images/sapphire.jpg)]*/
+	--background-image: url(https://github.com/zodd18/PinkNordAlternative/blob/master/.wallpapers/pink-nord-alternative-theme/raindrops-1_FHD.jpg?raw=true); /* app background image (link must be HTTPS) [default: url(https://clearvision.gitlab.io/images/sapphire.jpg)]*/
 	--background-position: center; /* app background position [default: center] */
 	--background-size: cover; /* app background size [default: cover] */
 	--background-repeat: no-repeat; /* app background repeat [default: no-repeat] */
@@ -61,12 +61,12 @@
 		
 	/* CHANNEL COLORS */
 	--channel-unread: #eceff4; /* Unread Server channel color. [default:  var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
-	--channel-color:  #81a1c1; /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
+	--channel-color:  #63c5ea; /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
 	--channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
 	--muted-color: #d8dee9; /*Muted channel color  [default: rgba(255,255,255,0.1);]*/
 	
 	/* MODAL BACKDROP */
-	--backdrop-overlay: #562135; /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
+	--backdrop-overlay: #63c5ea; /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
 	--backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS) [default: var(--background-image)] */
 	--backdrop-position: var(--background-position); /* modal backdrop position [default: var(--background-position)] */
 	--backdrop-size: var(--background-size); /* modal backdrop size [default: var(--background-size)] */
