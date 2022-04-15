@@ -1,5 +1,7 @@
 {
-	"general": {
-		"byNewlines": false
+	"all": {
+		"general": {
+			"byNewlines": false
+		}
 	}
 }

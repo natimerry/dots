@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty	
+	kitty	
 
 
 # program launcher
@@ -124,7 +124,7 @@ super + w
 	librewolf
 
 super + r
-	pcmanfm
+	thunar	
 
 super + x
     betterlockscreen -l

@@ -62,9 +62,9 @@ font-3 = "Sinji:pixelsize=15;5"
 font-4 = "Togalite medium:pixelsize=12;4"
 
 ; MODULES SETUP
-modules-left = workspaces
+modules-left =  workspaces
 modules-center = spotify windowtitle
-modules-right =  filesystem cpu memory volume date shutdown
+modules-right =  filesystem cpu memory volume date 
 
 tray-position = right
 ;tray-padding = 2
@@ -190,7 +190,8 @@ type = internal/fs
 
 ; Mountpoints to display
 mount-0 = /
-
+mount-1 = /home
+mount-2 = /mnt/Disk
 ; Seconds to sleep between updates
 ; Default: 30
 interval = 10

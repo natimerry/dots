@@ -1,17 +1,21 @@
 {
-	"changeLogs": {
-		"SplitLargeMessages": "1.7.2"
-	},
-	"choices": {
-		"toastPosition": "right"
-	},
-	"general": {
-		"showToasts": true,
-		"showSupportBadges": true,
-		"useChromium": false
-	},
-	"hashes": {
-		"0BDFDB.data.json": "8f08825d634cb1ebc423392cd4cb4f58805127e6",
-		"0BDFDB.raw.css": "5b4dfd0092eb658a85c3896c5fdab49cf83d0cee"
+	"all": {
+		"changeLogs": {
+			"SplitLargeMessages": "1.7.2",
+			"BDFDB": "2.3.0"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"showToasts": true,
+			"showSupportBadges": true,
+			"useChromium": false,
+			"shareData": true
+		},
+		"hashes": {
+			"0BDFDB.data.json": "a372dfd478fed12f97edbd12b495ef92beab4255",
+			"0BDFDB.raw.css": "afe854fd60051d750cebb99fb290bdce5c415f27"
+		}
 	}
 }
