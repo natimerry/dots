@@ -122,10 +122,8 @@ alt + shift + {Left,Down,Up,Right}
 
 super + w
 	librewolf
-
 super + r
-	thunar	
-
+    pcmanfm
 super + x
     betterlockscreen -l
 

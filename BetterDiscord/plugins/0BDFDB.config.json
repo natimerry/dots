@@ -1,8 +1,8 @@
 {
 	"all": {
 		"changeLogs": {
-			"SplitLargeMessages": "1.7.2",
-			"BDFDB": "2.3.0"
+			"BDFDB": "2.3.2",
+			"SplitLargeMessages": "1.7.2"
 		},
 		"choices": {
 			"toastPosition": "right"
@@ -14,8 +14,8 @@
 			"shareData": true
 		},
 		"hashes": {
-			"0BDFDB.data.json": "a372dfd478fed12f97edbd12b495ef92beab4255",
-			"0BDFDB.raw.css": "afe854fd60051d750cebb99fb290bdce5c415f27"
+			"0BDFDB.data.json": "76cc87eb9c0be59e66f1f62b11f9436c20e8726a",
+			"0BDFDB.raw.css": "e8d30d44e567f6a77ef4e90734c27c2b47306d20"
 		}
 	}
 }

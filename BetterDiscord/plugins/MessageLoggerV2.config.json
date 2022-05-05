@@ -20,7 +20,8 @@
         "onlyLogWhitelist": true,
         "whitelist": [
             "846080155268677685",
-            "940135856767914074"
+            "940135856767914074",
+            "840548185658621955"
         ],
         "blacklist": [],
         "notificationBlacklist": [],
