@@ -1,0 +1,23 @@
+#! bin/sh
+
+#kitty DESKTOP 1
+bspc rule -a kitty state=tiling manage=on layer=normal follow=on desktop=1
+
+#brave
+bspc rule -a Brave-browser state=tiling manage=on layer=normal desktop=2 follow=on
+
+#code
+bspc rule -a code-oss state=tiling manage=on layer=normal follow=on desktop=3
+
+#file explorers
+bspc rule -a Thunar state=tiling manage=on layer=normal follow=on desktop=4
+
+#image viewer
+bspc rule -a Ristretto state=tiling manage=on layer=normal follow=on desktop=5
+
+#video player
+bspc rule -a mpv state=tiling manage=on layer=below follow=on desktop=6
+bspc rule -a vlc state=tiling manage=on layer=below follow=on desktop=6
+
+#chatting aps
+ bspc rule -a discord state=tiling manage=on layer=normal follow=on desktop=7

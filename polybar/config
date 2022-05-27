@@ -65,7 +65,7 @@ font-3 = "Sinji:pixelsize=15;5"
 font-4 = "Togalite medium:pixelsize=12;4"
 
 ; MODULES SETUP
-modules-left =  workspaces
+modules-left =  bspwm
 modules-center = windowtitle
 modules-right =  network wired-network filesystem cpu memory volume date 
 
@@ -80,23 +80,32 @@ cursor-scroll = pointer
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %name%
-label-focused-background = ${colors.pink}
+ws-icon-0 = 1;%{F#A3BE8C}
+ws-icon-1 = 2;%{F#D08770}
+ws-icon-2 = 3;%{F#81A1C1}﬏
+ws-icon-3 = 4;%{F#EBCB8B}
+ws-icon-4 = 5;%{F#B48EAD}
+ws-icon-5 = 6;%{F#88C0D0}
+ws-icon-6 = 7;%{F#D08770}ﭮ
+ws-icon-7 = 8;%{F#A3BE8C}
+ws-icon-8 = 9;%{F#FFFFFF}
+label-focused = %icon%
+label-focused-background = #3a3c55
 label-focused-underline= ${colors.primary}
 label-focused-foreground = ${colors.foreground-alt}
 label-focused-padding = 2
 
-label-occupied = %name%
+label-occupied = %icon%
 label-occupied-background = ${colors.background}
 label-occupied-foreground = #e5e9f0
 label-occupied-padding = 2
 
-label-urgent = %name%
+label-urgent = %icon%
 label-urgent-background = ${colors.magenta}
 label-urgent-foreground = #e5e9f0
 label-urgent-padding = 2
 
-label-empty = %name% 
+label-empty = %icon% 
 label-empty-background = ${colors.background}
 label-empty-foreground = #e5e9f0
 label-empty-padding = 2
@@ -156,7 +165,7 @@ format = <label-state>
 label-active = %name%
 label-active-padding = 2
 label-active-foreground = ${colors.background}
-label-active-background = ${colors.pink}
+label-active-background = #3a3c55
 label-active-underline = ${colors.background}
 
 label-occupied = %name%
