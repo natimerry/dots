@@ -1,131 +1,121 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-./fm6000 -say "Keep it simple stupid." -c white
-alias yeet="paru -Rscn"
-alias yay="paru"
-alias samba="pcmanfm smb://192.168.29.46:1445/LANdrive/"
-alias MurderChildren= "paru -Rscn $(pacman -Qtdq) $(paru -Qtdq)"
-alias clear="clear && neofetch |lolcat"
-alias cl="clear"
-# confirmations, etc.) must go above this block; everything else may go below.
-# the detailed meaning of the below three variable can be found in `man zshparam`.
-export HISTFILE=~/.histfile
-export HISTSIZE=1000000   # the number of items for the internal history list
-export SAVEHIST=1000000   # maximum number of items for the history file
+# exports
+export EDITOR=vim
 
-# The meaning of these options can be found in man page of `zshoptions`.
-setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
-setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
-setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
-setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
-setopt EXTENDED_HISTORY  # record command start time
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if pacman -Qs devour > /dev/null
+then
+  alias mpv="devour mpv"
+  alias sxiv="devour sxiv"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+#alias
+alias ls="ls --color"
+alias la="ls -la --color"
+alias lu="ls -lu --color"
+
+alias ins="yay -Syu"
+alias yeet="yay -Rscn"
+alias yay="trizen"
+alias vim="nvim"
+alias v="nvim"
+alias gcl= "git clone"
+alias rmrf= "rm -rf"
+
+#functions
+
+convert_video(){
+	ffmpeg -i $1 -codec copy $2
+}
+
+alias x=extract
+
+extract() {
+	local remove_archive
+	local success
+	local extract_dir
+
+	if (( $# == 0 )); then
+		cat <<-'EOF' >&2
+			Usage: extract [-option] [file ...]
+			Options:
+			   -r, --remove    Remove archive after unpacking.
+		EOF
+	fi
+
+	remove_archive=1
+	if [[ "$1" == "-r" ]] || [[ "$1" == "--remove" ]]; then
+		remove_archive=0
+		shift
+	fi
+
+	while (( $# > 0 )); do
+		if [[ ! -f "$1" ]]; then
+			echo "extract: '$1' is not a valid file" >&2
+			shift
+			continue
+		fi
+
+		success=0
+		extract_dir="${1:t:r}"
+		case "${1:l}" in
+			(*.tar.gz|*.tgz) (( $+commands[pigz] )) && { pigz -dc "$1" | tar xv } || tar zxvf "$1" ;;
+			(*.tar.bz2|*.tbz|*.tbz2) tar xvjf "$1" ;;
+			(*.tar.xz|*.txz)
+				tar --xz --help &> /dev/null \
+				&& tar --xz -xvf "$1" \
+				|| xzcat "$1" | tar xvf - ;;
+			(*.tar.zma|*.tlz)
+				tar --lzma --help &> /dev/null \
+				&& tar --lzma -xvf "$1" \
+				|| lzcat "$1" | tar xvf - ;;
+			(*.tar.zst|*.tzst)
+				tar --zstd --help &> /dev/null \
+				&& tar --zstd -xvf "$1" \
+				|| zstdcat "$1" | tar xvf - ;;
+			(*.tar) tar xvf "$1" ;;
+			(*.tar.lz) (( $+commands[lzip] )) && tar xvf "$1" ;;
+			(*.gz) (( $+commands[pigz] )) && pigz -dk "$1" || gunzip -k "$1" ;;
+			(*.bz2) bunzip2 "$1" ;;
+			(*.xz) unxz "$1" ;;
+			(*.lzma) unlzma "$1" ;;
+			(*.z) uncompress "$1" ;;
+			(*.zip|*.war|*.jar|*.sublime-package|*.ipsw|*.xpi|*.apk|*.aar|*.whl) unzip "$1" -d $extract_dir ;;
+			(*.rar) unrar x -ad "$1" ;;
+			(*.rpm) mkdir "$extract_dir" && cd "$extract_dir" && rpm2cpio "../$1" | cpio --quiet -id && cd .. ;;
+			(*.7z) 7za x "$1" ;;
+			(*.deb)
+				mkdir -p "$extract_dir/control"
+				mkdir -p "$extract_dir/data"
+				cd "$extract_dir"; ar vx "../${1}" > /dev/null
+				cd control; tar xzvf ../control.tar.gz
+				cd ../data; extract ../data.tar.*
+				cd ..; rm *.tar.* debian-binary
+				cd ..
+			;;
+			(*.zst) unzstd "$1" ;;
+			(*)
+				echo "extract: '$1' cannot be extracted" >&2
+				success=1
+			;;
+		esac
+
+		(( success = $success > 0 ? $success : $? ))
+		(( $success == 0 )) && (( $remove_archive == 0 )) && rm "$1"
+		shift
+	done
+}
+
+#misc options
+eval $(thefuck --alias)
+
+
+#plugin bullshit
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf-zsh-plugin)
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
