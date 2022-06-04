@@ -1,13 +1,6 @@
 # exports
 export EDITOR=vim
 
-if pacman -Qs devour > /dev/null
-then
-  alias mpv="devour mpv"
-  alias sxiv="devour sxiv"
-fi
-
-
 #alias
 alias ls="ls --color"
 alias la="ls -la --color"
@@ -26,8 +19,6 @@ alias rmrf= "rm -rf"
 convert_video(){
 	ffmpeg -i $1 -codec copy $2
 }
-
-alias x=extract
 
 extract() {
 	local remove_archive
@@ -106,16 +97,15 @@ extract() {
 }
 
 #misc options
-eval $(thefuck --alias)
 
 
 #plugin bullshit
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="lambda-mod"
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf-zsh-plugin)
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+setopt correct
