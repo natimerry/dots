@@ -1,0 +1,16 @@
+nerd-fonts-complete
+noto-fonts-cjk
+fzf
+thefuck
+unrar
+unzip
+nitrogen
+bspwm
+rofi
+picom-tryone-git
+xfce-polkit
+sxhkd
+polybar
+noto-fonts-emoji
+rofi-emoji
+rofi-calc
