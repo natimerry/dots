@@ -1,14 +1,11 @@
-nerd-fonts-complete
 noto-fonts-cjk
 fzf
-thefuck
 unrar
 unzip
 nitrogen
+udiskie
 bspwm
 rofi
-picom-tryone-git
-xfce-polkit
 sxhkd
 polybar
 noto-fonts-emoji
