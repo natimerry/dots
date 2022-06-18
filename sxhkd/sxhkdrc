@@ -112,7 +112,7 @@ alt + shift + {Left,Down,Up,Right}
 # ===================================
 
 super + w
-	brave
+	firefox
 super + r
    	thunar 
 super + x

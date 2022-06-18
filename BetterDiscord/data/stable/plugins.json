@@ -1,8 +1,8 @@
 {
-    "Freemoji": true,
-    "MessageLoggerV2": true,
+    "BDFDB": true,
     "ZeresPluginLibrary": true,
     "XenoLib": true,
-    "SplitLargeMessages": true,
-    "BDFDB": true
+    "Freemoji": true,
+    "MessageLoggerV2": true,
+    "SplitLargeMessages": true
 }

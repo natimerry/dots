@@ -18,7 +18,7 @@ pipewire &
 
 # wallpaper
 nitrogen --restore &
-
+udiskie &
 # policy kit
 if [[ ! `pidof xfce-polkit` ]]; then
 	/usr/lib/xfce-polkit/xfce-polkit &
@@ -31,3 +31,4 @@ then
 else
 	sh .config/bspwm/hideborder.sh &
 fi
+discord --start-minimized &

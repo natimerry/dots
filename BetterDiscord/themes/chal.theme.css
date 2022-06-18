@@ -1,6 +1,6 @@
 /**
- * @name ClearVision
- * @author ClearVision Team
+ * @name nekochontix
+ * @author  j2
  * @version 6.2.1
  * @description Highly customizable theme for BetterDiscord.
  * @source https://github.com/ClearVision/ClearVision-v6
@@ -13,7 +13,7 @@
 /* IMPORT CSS */
 @import url(https://clearvision.gitlab.io/v6/main.css);
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Source+Code+Pro:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* SETTINGS */
 :root {
 
@@ -32,7 +32,7 @@
 	--offline-color: #cecece; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
 
 	/* GENERAL */
-	--main-font: 'Roboto', sans-serif; /* main font for app (font must be installed) [default: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif] */
+	--main-font:  'Roboto', sans-serif; /* main font for app (font must be installed) [default: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif] */
 	--code-font:  'JetBrains Mono', monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
 	--text-normal: #eceff4; /* color of default discord text */
 	--text-muted:  #d8dee9; /* color of default discord muted text (e.g.text found in input fields before typing).*/

@@ -5,7 +5,8 @@ bspc rule -a kitty state=tiling manage=on layer=normal follow=on desktop=1
 
 #brave
 bspc rule -a Brave-browser state=tiling manage=on layer=normal desktop=2 follow=on
-
+bspc rule -a chromium state=tiling manage=on layer=normal desktop=2 follow=on
+bspc rule -a Chromium state=tiling manage=on layer=normal desktop=2 follow=on
 #code
 bspc rule -a code-oss state=tiling manage=on layer=normal follow=on desktop=3
 
