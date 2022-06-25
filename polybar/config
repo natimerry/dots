@@ -247,7 +247,7 @@ format-foreground = ${colors.background}
 format-padding = 4
 label = "  %title%"
 label-maxlen = 100
-label-empty = "  "
+label-empty = "  "
 label-separator = " "
 label-empty-foreground = ${colors.background}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
