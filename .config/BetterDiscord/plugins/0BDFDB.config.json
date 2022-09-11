@@ -1,0 +1,22 @@
+{
+	"all": {
+		"changeLogs": {
+			"GameActivityToggle": "1.1.3",
+			"JoinedAtDate": "1.3.4",
+			"SpotifyControls": "1.2.5"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showToasts": true,
+			"showSupportBadges": true,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "ab73f458c535e804b3efc1a7fc7449ac6576d5f8",
+			"0BDFDB.raw.css": "98e9c027ef6e97326ac142859216e2f96c20ac4d"
+		}
+	}
+}

@@ -1,0 +1,39 @@
+#
+# wm independent hotkeys
+#
+
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + Print
+    flameshot gui
+
+super + shift + d
+    rofi -show drun
+super + w
+	  brave-bin &
+super + r
+   	thunar 
+
+super + c
+    code
+
+super + shift + i
+    flameshot gui
+
+super + shift + s
+	dbus-launch --exit-with-session spotify
+
+XF86Audio{Next,Prev,Play,Stop}
+	mpc {next,prev,toggle,stop}
+
+	XF86AudioRaiseVolume
+    pactl set-sink-volume $(pactl info | grep alsa_output | sed -r 's/^Default Sink: //') +5%
+XF86AudioLowerVolume
+    pactl set-sink-volume $(pactl info | grep alsa_output | sed -r 's/^Default Sink: //') -5%
+XF86AudioMute
+    pactl set-sink-mute $(pactl info | grep alsa_output | sed -r 's/^Default Sink: //') toggle
+
+XF86Audio{Next,Prev,Play,Stop}
+	playerctl --all-players {next,previous,play-pause,stop}
+

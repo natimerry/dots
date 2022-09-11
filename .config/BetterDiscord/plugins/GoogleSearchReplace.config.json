@@ -1,0 +1,26 @@
+{
+	"all": {
+		"engines": {
+			"_all": true,
+			"Ask": true,
+			"Bing": true,
+			"DogPile": false,
+			"DuckDuckGo": true,
+			"Ecosia": false,
+			"GitHub": false,
+			"Google": true,
+			"GoogleScholar": false,
+			"Quora": true,
+			"Qwant": false,
+			"UrbanDictionary": false,
+			"Searx": false,
+			"StackOverflow": true,
+			"Startpage": false,
+			"Whoogle": false,
+			"WolframAlpha": false,
+			"Yandex": true,
+			"Yahoo": true,
+			"YouTube": false
+		}
+	}
+}
