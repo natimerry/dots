@@ -1,20 +1,20 @@
 #!bin/sh
-
+source ~/.zsh_plugs/funcs.zsh 
 #hotkey daemon
 sxhkd &
 autorandr --change primary
-picom --experimental-backend &
+picom &
 dunst &
 sh ~/.config/polybar/launch.sh
 
 # network manager applet
 nm-applet &
-
+feh --bg /home/nolife/wallpapers/raindrops-1_FHD.jpg
 #sound breh
-pipewire &
+#pipewire &
 
 # wallpaper
-nitrogen --restore &
+#nitrogen --restore &
 #udiskie &
 # policy kit
 if [[ ! `pidof xfce-polkit` ]]; then
@@ -29,5 +29,5 @@ else
 	sh .config/bspwm/hideborder.sh &
 fi
 #udiskie &
-nm-applet &
-udisksctl mount --block-device /dev/sda1 -t ntfs
+#pywal &
+#nm-applet &

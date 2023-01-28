@@ -1,0 +1,15 @@
+{
+    "BDFDB": true,
+    "ZeresPluginLibrary": false,
+    "XenoLib": false,
+    "Freemoji": true,
+    "MessageLoggerV2": false,
+    "SplitLargeMessages": false,
+    "BugReportHelper": false,
+    "FileViewer": false,
+    "GameActivityToggle": false,
+    "GoogleSearchReplace": false,
+    "JoinedAtDate": false,
+    "SpotifyControls": false,
+    "TypingIndicator": false
+}

@@ -41,4 +41,5 @@ xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Disable While Typing E
 
 xsetroot -cursor_name left_ptr
 sh ~/.config/bspwm/autostart.sh &
+#wal -R
 sh .config/bspwm/rules
