@@ -36,34 +36,9 @@
 ;pink = #FA5AA4
 ;blue = #81a1c1
 ;
-; PYWAL
-; [colors]
-; background = ${xrdb:color0:#222}
-; foreground = ${xrdb:color7:#222}
-; foreground-alt = ${xrdb:color7:#222}
-; primary = ${xrdb:color1:#222}
-; secondary = ${xrdb:color2:#222}
-; alert = ${xrdb:color3:#222}
-; ; background = #191c24
-; ; background-alt = #d1c4e99
-; ; foreground = #e5e9f0
-; ; foreground-alt = #282e3a
-; ; primary = #ffb52a
-; ; secondary = #e60053
-; ; alert = #B48EAD
-;
-; cyan = #63C5EA
-; aqua = #8FBCBB
-; red = ${xrdb:color1:#222}
-; yellow = #EBCB8B
-; green = #2BE491
-; orange = #D08770
-; magenta = #CF8EF4
-; white = #F9F9F9
-; pink = ${xrdb:color1:#222}
-; blue = #81a1c1
+
 [colors]
-background = #191c24
+background = #1e1e2e
 background-alt = #d1c4e99
 foreground = #e5e9f0
 foreground-alt = #282e3a
@@ -71,15 +46,15 @@ primary = #ffb52a
 secondary = #e60053
 alert = #B48EAD
 
-cyan = #63C5EA
+cyan = #89b4fa
 aqua = #8FBCBB
-red = #FA5AA4
+red = #f38b5a
 yellow = #EBCB8B
 green = #2BE491
 orange = #D08770
-magenta = #CF8EF4
+magenta = #f38b5a
 white = #F9F9F9
-pink = #FA5AA4
+pink = #f38bfa
 blue = #81a1c1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

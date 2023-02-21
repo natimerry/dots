@@ -3,19 +3,19 @@ source ~/.zsh_plugs/funcs.zsh
 #hotkey daemon
 sxhkd &
 autorandr --change primary
-picom &
+#picom &
 dunst &
 sh ~/.config/polybar/launch.sh
 
 # network manager applet
 nm-applet &
-feh --bg /home/nolife/wallpapers/raindrops-1_FHD.jpg
+
 #sound breh
-#pipewire &
+pipewire &
 
 # wallpaper
-#nitrogen --restore &
-#udiskie &
+nitrogen --restore &
+/usr/libexec/xfce-polkit &
 # policy kit
 if [[ ! `pidof xfce-polkit` ]]; then
 	/usr/libexec/xfce-polkit &
@@ -28,6 +28,3 @@ then
 else
 	sh .config/bspwm/hideborder.sh &
 fi
-#udiskie &
-#pywal &
-#nm-applet &
