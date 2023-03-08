@@ -3,7 +3,7 @@ source ~/.zsh_plugs/funcs.zsh
 #hotkey daemon
 sxhkd &
 autorandr --change primary
-#picom &
+picom &
 dunst &
 sh ~/.config/polybar/launch.sh
 
@@ -11,7 +11,10 @@ sh ~/.config/polybar/launch.sh
 nm-applet &
 
 #sound breh
-pipewire &
+if [[ ! `pidof pipewire` ]]; then
+	gentoo-pipewire-launcher &
+fi
+
 
 # wallpaper
 nitrogen --restore &

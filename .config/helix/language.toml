@@ -1,0 +1,11 @@
+[[language]]
+name = "rust"
+auto-format = false
+
+
+[[language]]
+name = "c"
+auto-format = false
+file-types = ["c", "cpp","h","hpp"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "  " }

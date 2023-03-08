@@ -1,8 +1,7 @@
-(cat $HOME/.config/wpg/sequences &)
 alias ls="ls --color"
 autoload -U colors && colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PS1="%B%{$fg[red]%}[%{$fg[magenta]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[yellow]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[magenta]%}%n%{$fg[green]%}@%{$fg[cyan]%}%M %{$fg[yellow]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
  ## Basic auto/tab complete:
 autoload -U compinit
@@ -23,7 +22,36 @@ setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 setopt EXTENDED_HISTORY  # record command start time
 
+alias myip="curl ipinfo.io/ip"
+alias ipinfo="curl ipinfo.io"
+alias parrot="curl parrot.live"
+alias moon="curl wttr.in/moon"
 
+function count_loc(){
+  find . -name "*.$1" | sed 's/.*/"&"/' | xargs  wc -l
+}
+function send_files()
+{
+  url=$1
+  curl -F"file=@$url" -Fsecret="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13 ; echo '')" https://0x0.st/
+  
+}
+function cheat(){
+  curl cheat.sh/$1
+}
+
+function goto(){
+  if [ -z "$1" ]
+  then
+     cd $(find ./ -type d | fzf);
+  else 
+    cd $(find $1 -type d | fzf);
+  fi 
+}
+
+function edit(){
+  $EDITOR $(find $1 | fzf)
+}
 ### KEY_BINDINGS ###
 # vim: ts=4 sw=4
 # INS, DEL, etc.

@@ -1,0 +1,78 @@
+"ui.background" = { bg = "background" }
+"ui.virtual" = "lightgrey"
+"ui.menu" = { fg = "blue", bg = "ligtblack" }
+"ui.menu.selected" = { fg = "ligtblack", bg = "darkgrey" }
+"ui.linenr" = { fg = "lightgrey", bg = "background" }
+"ui.popup" = { bg = "ligtblack" }
+"ui.window" = { bg = "ligtblack" }
+"ui.linenr.selected" = { fg = "darkgrey", bg = "ligtblack", modifiers = ["bold"] }
+"ui.selection" = { bg = "ligtblack" }
+"comment" = { fg = "lightgrey", modifiers = ["italic"] }
+"ui.statusline" = { fg = "darkgrey", bg = "ligtblack" }
+"ui.help" = { fg = "darkgrey", bg = "ligtblack" }
+"ui.cursor" = { fg = "darkgrey", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "blue", modifiers = ["reversed"] }
+"ui.text" = "blue"
+"operator" = "blue"
+"ui.text.focus" = "magenta"
+"variable" = "magenta"
+"constant.numeric" = "orange"
+"constant" = "orange"
+"attributes" = "orange"
+"type" = "yellow"
+"ui.cursor.match" = { fg = "yellow", modifiers = ["underlined"] }
+"string"  = "green"
+"variable.other.member" = "green"
+"constant.character.escape" = "magenta"
+"function" = "magenta"
+"constructor" = "magenta"
+"special" = "magenta"
+"keyword" = "blue"
+"label" = "blue"
+"namespace" = "blue"
+"ui.help" = { fg = "blue", bg = "ligtblack" }
+
+"markup.heading" = "magenta"
+"markup.list" = "magenta"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "blue", modifiers = ["italic"] }
+"markup.link.url" = { fg = "orange", modifiers = ["underlined"] }
+"markup.link.text" = "magenta"
+"markup.quote" = "base0C"
+"markup.raw" = "green"
+
+"diff.plus" = "green"
+"diff.delta" = "orange"
+"diff.minus" = "red"
+
+"diagnostic" = { modifiers = ["underlined"] }
+"ui.gutter" = { bg = "ligtblack" }
+"info" = "yellow"
+"hint" = "lightgrey"
+"debug" = "lightgrey"
+"warning" = "orange"
+"error" = "red"
+
+[palette]
+red     = "#ff6c6b"
+
+background = "#282c34" # Default Background
+ligtblack = "#1c1e24" # Background (Used for status bars, line number and folding marks)
+#blue = "#2257A0" # Selection Background
+lightgrey = "#5B6268" # Comments, Invisibles, Line Highlighting
+darkgrey = "#bfbfbf" # Dark Foreground (Used for status bars)
+#blue = "#d8d8d8" # Default Foreground, Caret, Delimiters, Operators
+base06 = "#e8e8e8" # Light Foreground (Not often used)
+base07 = "#f8f8f8" # Light Background (Not often used)
+#magenta = "#c678dd" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+orange = "#da8548" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
+yellow = "#ecbe7b" # Classes, Markup Bold, Search Text Background
+green = "#98be65" # Strings, Inherited Class, Markup Code, Diff Inserted
+base0C = "#86c1b9" # Support, Regular Expressions, Escape Characters, Markup Quotes
+magenta = "#c678dd" # Functions, Methods, Attribute IDs, Headings
+blue = "#51afef" # Keywords, Storage, Selector, Markup Italic, Diff Changed
+base0F = "#a16946" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+
+ 
+
+

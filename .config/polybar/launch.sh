@@ -5,6 +5,6 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch
-polybar example -c ~/.config/polybar/config &
+polybar mainbar-bspwm -c ~/.config/polybar/config.ini &
 
 echo "Bar launched..."

@@ -5,6 +5,7 @@ bspc rule -a kitty state=tiling manage=on layer=normal follow=on desktop=1
 
 #brave
 bspc rule -a Brave-browser state=tiling manage=on layer=normal desktop=2 follow=on
+bspc rule -a librewolf state=tiling manage=on layer=normal desktop=2 follow=on
 bspc rule -a chromium state=tiling manage=on layer=normal desktop=2 follow=on
 bspc rule -a Chromium state=tiling manage=on layer=normal desktop=2 follow=on
 #code
@@ -21,4 +22,4 @@ bspc rule -a mpv state=tiling manage=on layer=below follow=on desktop=6
 bspc rule -a vlc state=tiling manage=on layer=below follow=on desktop=6
 
 #chatting aps
- bspc rule -a discord state=tiling manage=on layer=normal follow=on desktop=7
+bspc rule -a discord state=tiling manage=on layer=normal follow=on desktop=7

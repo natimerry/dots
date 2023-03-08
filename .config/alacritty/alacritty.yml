@@ -4,7 +4,7 @@
 
 ## Import files (Colors, Fonts, Etc)
 import:
-  - ~/.config/alacritty/colors.yml
+  - ~/.config/alacritty/themes/themes/doom_one.yaml
   - ~/.config/alacritty/fonts.yml
 
 ## Set environment variables
@@ -31,9 +31,8 @@ window:
   multiplier: 3
 
 ## Background opacity
-# background_opacity: 1.0
 window:
-  opacity: 0.8
+  opacity: 1
   padding:
     x: 10
     y: 10

@@ -6,7 +6,7 @@ super + Return
 
 # program launcher
 super + d
-	~/.config/bspwm/rofi/bin/launcher
+	rofi -show drun
 
 super + shift +d 
 	/home/nolife/.config/bspwm/rofi/bin/asroot
@@ -18,7 +18,7 @@ super + Escape
 
 # Open sxhkdrc config file
 super F1
-	kitty -e vim ~/.config/sxhkd/sxhkdrc
+	alacritty -e vim ~/.config/sxhkd/sxhkdrc
 
 Print
     flameshot gui
@@ -118,7 +118,7 @@ alt + shift + {Left,Down,Up,Right}
 super + w
 	brave &	
 super + r
-   	thunar & 
+	thunar &
 super + x
     betterlockscreen -l
 
